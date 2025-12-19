@@ -1,7 +1,7 @@
 # Email Engagement Analysis & Predictive Modeling
 
 ## Project Overview
-This project analyzes email campaign performance and builds predictive models to optimize user engagement. The goal is to understand email open and click behavior, calculate key KPIs, and identify high-potential segments for personalized targeting.
+This project analyzes email campaign performance and builds predictive models to optimize user engagement. The goal is to understand email open and click behavior, calculate key KPIs, and identify high-potential segments for personalized targeting. When I began exploring the email engagement data, I expected to find a few simple patterns—perhaps certain email types or times of day performing slightly better. Instead, I uncovered a complex and fascinating story of user behavior, shaped by timing, personalization, and loyalty. Each insight revealed not just what was happening, but why, helping me understand how to craft campaigns that truly connect with users and drive engagement.
 
 ---
 
@@ -33,10 +33,10 @@ The dataset used in this project contains detailed logs from email campaigns. It
 ## Objectives
 1. **Email Campaign Analysis**
    - Calculate KPIs: Delivery Rate, Open Rate, Click Rate, Click-to-Open Rate, Spam Rate, Unsubscribe Rate, Engaged Rate  
-   - Analyze trends by Email Type, Hour of Day, and Email Version  
+   - Analyze trends by Email Type and Hour of Day 
 
 2. **Segmentation Analysis**
-   - Segment users by time-of-day, weekday, and email version  
+   - Segment users by time-of-day and weekday  
    - Identify high-engagement groups  
 
 3. **Predictive Modeling**
@@ -79,20 +79,16 @@ The dataset used in this project contains detailed logs from email campaigns. It
 - **Open Rate**: 38.97%  
 - **Click Rate**: 1.08%  
 - **Click-to-Open Rate**: 2.78%  
-- **Engaged Rate**: 40.05%  
+- **Delivery Rate**: 87.71%  
 - **Expected improvement** by targeting top 30% of predicted high-click users: **225%**
 
 > Note: Clicks in this dataset are a subset of opens, so engagement is defined as `Opened`.
 
 ---
 
-## Visualizations
-
-[View Interactive Dashboard]([https://public.tableau.com/views/](https://public.tableau.com/app/profile/rohini.patturaja/viz/EmailEngagementDashboard/EmailEngagementDashboard?publish=yes))
-
 ## Dashboard Visualization
+[![Email Engagement Dashboard](images/dashboard.png)](https://public.tableau.com/app/profile/rohini.patturaja/viz/EmailEngagementDashboard/EmailEngagementDashboard)
 
-![Email Engagement Dashboard](images/dashboard.png)
 
 ---
 
