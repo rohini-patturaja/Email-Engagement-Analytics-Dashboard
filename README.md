@@ -6,21 +6,27 @@ This project analyzes email campaign performance and builds predictive models to
 ---
 
 ## Dataset
-The dataset contains email campaign logs with the following key columns:
 
-- `Email Address` – recipient email  
-- `Email Name` – name of the email campaign  
-- `Email Type` – type/category of the email  
-- `Delivery Status` – whether the email was successfully delivered  
-- `Opened` – binary flag indicating if the email was opened  
-- `Clicked` – binary flag indicating if any link was clicked  
-- `Marked as spam` – binary flag indicating if the email was marked as spam  
-- `Unsubscribe` – binary flag indicating user unsubscribed  
-- `Group Unsubscribe` – binary flag for group unsubscribe  
-- `First Opened UTC` / `Last Opened UTC` – timestamps of email opens  
-- `First Clicked UTC` / `Last Clicked UTC` – timestamps of email clicks  
+The dataset used in this project contains detailed logs from email campaigns. It includes the following key columns:
 
-> Note: The dataset has been anonymized for confidentiality.
+| Column Name             | Description                                                                 |
+|-------------------------|-----------------------------------------------------------------------------|
+| `Email Address`         | Recipient email address                                                     |
+| `Email Name`            | Name of the email campaign                                                 |
+| `Email Type`            | Category or type of email (e.g., newsletter, promotion)                    |
+| `Delivery Status`       | Status of email delivery (e.g., Delivered, Bounced)                        |
+| `Opened`                | Binary flag (1/0) indicating whether the email was opened                  |
+| `First Opened UTC`      | Timestamp of the first time the email was opened                            |
+| `Last Opened UTC`       | Timestamp of the last time the email was opened                             |
+| `Clicked`               | Binary flag (1/0) indicating whether any link in the email was clicked      |
+| `First Clicked UTC`     | Timestamp of the first time a link was clicked                               |
+| `Last Clicked UTC`      | Timestamp of the last time a link was clicked                                |
+| `Marked as spam`        | Binary flag (1/0) indicating if the email was marked as spam                |
+| `Unsubscribe`           | Binary flag (1/0) indicating if the recipient unsubscribed                  |
+| `Group Unsubscribe`     | Binary flag (1/0) indicating if the recipient unsubscribed from the group   |
+
+> **Note:** The dataset has been anonymized for confidentiality and privacy. All personally identifiable information (PII) has been removed or masked.
+
 
 ---
 
