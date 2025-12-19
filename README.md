@@ -88,7 +88,11 @@ The dataset used in this project contains detailed logs from email campaigns. It
 
 ## Visualizations
 
-[View Interactive Dashboard](https://public.tableau.com/views/)
+[View Interactive Dashboard]([https://public.tableau.com/views/](https://public.tableau.com/app/profile/rohini.patturaja/viz/EmailEngagementDashboard/EmailEngagementDashboard?publish=yes))
+
+## Dashboard Visualization
+
+![Email Engagement Dashboard](images/dashboard.png)
 
 ---
 
