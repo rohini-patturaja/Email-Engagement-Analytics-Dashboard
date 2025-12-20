@@ -1,6 +1,6 @@
-# 📧 Email Engagement Analysis & Predictive Modeling
+# Email Engagement Analysis & Predictive Modeling
 
-## 📌 Project Overview
+## Project Overview
 Every day, millions of emails are sent with the hope of engaging recipients, but most end up unread or ignored. This project analyzes email campaign performance and builds predictive models to optimize user engagement. The objective is to understand **email open and click behavior**, calculate key **marketing KPIs**, and identify **high-potential user segments** for smarter, data-driven targeting. This project analyzes **790,270** email campaigns sent over a two-year period to uncover:
 
 1. Which types of emails resonate most with audiences?
@@ -35,7 +35,7 @@ The dataset used in this project contains detailed logs from email campaigns. It
 
 ---
 
-## 🎯 Objectives
+## Objectives
 - Analyze email campaign performance using core KPIs  
 - Identify trends by **email type, time of day, and weekday**  
 - Build predictive models to estimate **click probability**  
@@ -44,7 +44,7 @@ The dataset used in this project contains detailed logs from email campaigns. It
 
 ---
 
-## 🔧 Methodology
+## Methodology
 
 ### Data Cleaning & Preparation
 - Converted boolean fields (`Opened`, `Clicked`, `Spam`, `Unsubscribe`) to binary values  
@@ -73,67 +73,64 @@ The dataset used in this project contains detailed logs from email campaigns. It
 
 ---
 
-## 📊 Key Insights (Highlighted)
+## Business Questions 
 
-### 🔹 Overall Campaign Performace
-- **Emails Sent:** ~790K  
-- **Delivery Rate:** 87.7%  
-- **Open Rate:** **38.97%**  
-- **Click Rate:** **1.08%**  
-- **Click-to-Open Rate:** **2.78%**  
-- **First Insight:** Good news—our spam (0.01%) and unsubscribe (0.03%) rates are excellent, indicating healthy audience quality! But the 1.08% click rate reveals a major opportunity.
+**1. What are the overall email campaign performance metrics, and how do they compare to industry benchmarks?**
+   
+Based on our analysis of 790,270 emails:
 
----
+- Email Open Rate: 38.97% of total recipients opened the email
+- Click Rate: Approximately 1.08% of total recipients clicked on the link
+- Click-to-Open Rate (CTOR): 2.78% of users who opened proceeded to click
+- Delivery Rate: 87.71% of emails were successfully delivered
+- Engagement Rate: 40.05% of users either opened or clicked
 
-### 🔹 Email Type Performance
-I asked: **"Which types of emails perform best?"**
-- **Athletics emails** had the highest engagement  
-  - Open Rate: **44.2%**
-  - Click Rate: **2.57%**
-- Fundraising and event emails underperformed, suggesting lower perceived value or relevance.
+Industry Comparison:
 
----
+✅ Open Rate (38.97%): Above industry average (15-25%)
 
-### 🔹 Timing is Everything
-Next question: **"When do people actually click?"**
+❌ Click Rate (1.08%): Below industry average (2-5%)
 
-- Click rates were significantly higher during **afternoon and evening hours**.Sending emails in the afternoon yields 5.7x more clicks than nighttime sends.
-- Weekday engagement patterns remained consistent, but **time of day** played a stronger role than day alone.
-- **Actionable Insight:** Scheduling our most important campaigns for Wednesday afternoons could 5x our click rates compared to random timing!
+❌ CTOR (2.78%): Below industry standard (10-15%)
 
 ---
 
-## 🤖 Building Predictive Modeling
-Now for the exciting part: Can we predict who will click before we send?
+**2. Which types of emails perform best?**
 
-I tested three machine learning algorithms:
+- Athletics emails achieve 44% open rates and 2.6% click rates — nearly 3× better than events/fundraising
+- This suggests audiences are significantly more engaged with sports-related content
+- The gap between categories indicates opportunity to apply athletics' successful elements to underperforming types
 
-Algorithm            | Mean ROC AUC | Std Dev  | Performance
----------------------|--------------|----------|-------------
-Logistic Regression  |   0.9022     | ±0.0025  | ⭐⭐⭐⭐
-Random Forest        |   0.8801     | ±0.0024  | ⭐⭐⭐
-Gradient Boosting    |   0.9108     | ±0.0024  | ⭐⭐⭐⭐⭐ WINNER!
+**3. When do people actually click?**
 
-- Winner: Gradient Boosting achieved the best ROC AUC of 0.9108, meaning it can accurately rank users by their likelihood to click. 
+- Best Send Time: Afternoon (12-18) generates 4.0% click rate — 5.7× higher than nighttime
+- Peak Day/Time Combination: Wednesday afternoon (5.46% click rate)
+- Worst Times: Weekend nights and early mornings (0-6) show <1% click rates
 
-### Hyperparameter Tuning
+**4. What patterns drive engagement?**
 
-### 🔑 Model Performance
-- **Gradient Boosting CV ROC AUC:** **0.9108**  
-- **Test ROC AUC:** **0.912**
-- **Test Accuracy:** 99.0%
-- The model faces **severe class imbalance** (only 0.95% of emails get clicked). While it achieves:
-- ✅ **High ROC AUC (0.912)**: Excellent at **ranking** users by click probability
-- ❌ **Low recall for clicks**: Struggles with binary yes/no classification
+- Open rates are relatively consistent across weekdays (~100% baseline)
+- Click rates vary dramatically by time of day and day of week
+- This indicates timing affects action-taking behavior more than initial interest
+
+**5. Can you build a model to predict which users are most likely to click, and what are the key predictive features?**
+
+Yes, I built a Gradient Boosting model that effectively predicts email click probability.
+
+**Model Performance:**
+
+- ROC AUC Score: 0.9108 (cross-validation), 0.9121 (test set)
+- Accuracy: 99.0%
+- Best Model: Gradient Boosting outperformed Logistic Regression (0.9022) and Random Forest (0.8801)
 
 **The Silver Lining**: This is actually perfect for our use case! We don't need to predict exact clicks—we need to **rank users and target the most likely clickers**.
 
 
 ---
 
-## Business Impact💰
+## Business Impact
 
-### 🎯 Targeting Strategy
+### Targeting Strategy
 By targeting the **top 30% of users with the highest predicted click probability**:
 
 - **Baseline CTR:** 0.95%  
@@ -144,7 +141,7 @@ This demonstrates that **smart targeting outperforms mass emailing**.We can get 
 
 ---
 
-## 🧪 A/B Testing Validation
+## A/B Testing Validation
 - **Sample size for 80% power:** 340 users per group  
 - **Recommended test size:** 5,000 users per group  
 - **Statistical power achieved:** 1.0  
@@ -156,11 +153,11 @@ This confirms the uplift is **statistically reliable and scalable**.
 ## 📈 Tableau Dashboard
 I built a **Tableau dashboard** to make these insights actionable for the marketing team:
 **Dashboard Features:**
-- 📅 Monthly performance calendar(available only for July - Oct 2025) with click heatmap
-- 📊 Campaign comparison table with visual gauges
-- 📈 Weekday engagement patterns
-- 🎯 Open rate vs. Click rate scatter plot
-- 🔍 Interactive filters for deep-dive analysis
+- Monthly performance calendar(available only for July - Oct 2025) with click heatmap
+- Campaign comparison table with visual gauges
+- Weekday engagement patterns
+- Open rate vs. Click rate scatter plot
+- Interactive filters for deep-dive analysis
 
 🔗 **View Dashboard:**  
 
@@ -168,7 +165,7 @@ I built a **Tableau dashboard** to make these insights actionable for the market
 
 ---
 
-## 💡 Key Recommendations
+## Key Recommendations
 Based on 790,270 emails analyzed, here's what the data tells us to do:
 
 **1. Adopt Probability-Based Targeting**
@@ -188,13 +185,13 @@ Validate model-driven targeting with A/B tests using 340–5,000 users per group
 
 ---
 
-## 🧠 Conclusion
+## Conclusion
 This project demonstrates that email engagement is not random—it follows clear, learnable patterns driven by content, timing, and user context. By combining rigorous data cleaning, KPI analysis, predictive modeling, and interactive Tableau dashboards, I transformed raw campaign data into a practical decision-making framework.
 
 The results show that smarter targeting—not higher volume—is the key to performance gains. With a 225% projected improvement in click-through rate and a statistically validated testing strategy, this analysis provides a scalable roadmap for turning email campaigns into high-impact engagement channels.
 
 ---
-## 🔮 Future Enhancements
+## Future Enhancements
 
  - Natural Language Processing: Analyze subject lines and email body text
  - Churn Prediction: Identify at-risk subscribers before they unsubscribe
