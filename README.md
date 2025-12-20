@@ -170,6 +170,7 @@ I built a **Tableau dashboard** to make these insights actionable for the market
 
 ## 💡 Key Recommendations
 Based on 790,270 emails analyzed, here's what the data tells us to do:
+
 **1. Adopt Probability-Based Targeting**
 Use the Gradient Boosting model to rank users by predicted click likelihood and prioritize the top segments rather than emailing the full audience.
 
@@ -206,4 +207,5 @@ The results show that smarter targeting—not higher volume—is the key to perf
 --- 
 
 Made with ❤️ and Python | © 2025 [Rohini Patturaja]
+
 ⬆ Back to Top
