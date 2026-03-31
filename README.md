@@ -150,7 +150,7 @@ This confirms the uplift is **statistically reliable and scalable**.
 
 ---
 
-## 📈 Tableau Dashboard
+##  Tableau Dashboard
 I built a **Tableau dashboard** to make these insights actionable for the marketing team:
 **Dashboard Features:**
 - Monthly performance calendar(available only for July - Oct 2025) with click heatmap
@@ -186,9 +186,9 @@ Validate model-driven targeting with A/B tests using 340–5,000 users per group
 ---
 
 ## Conclusion
-This project demonstrates that email engagement is not random—it follows clear, learnable patterns driven by content, timing, and user context. By combining rigorous data cleaning, KPI analysis, predictive modeling, and interactive Tableau dashboards, I transformed raw campaign data into a practical decision-making framework.
+This project demonstrates that email engagement is not random it follows clear, learnable patterns driven by content, timing, and user context. By combining rigorous data cleaning, KPI analysis, predictive modeling, and interactive Tableau dashboards, I transformed raw campaign data into a practical decision-making framework.
 
-The results show that smarter targeting—not higher volume—is the key to performance gains. With a 225% projected improvement in click-through rate and a statistically validated testing strategy, this analysis provides a scalable roadmap for turning email campaigns into high-impact engagement channels.
+The results show that smarter targeting not higher volume is the key to performance gains. With a 225% projected improvement in click-through rate and a statistically validated testing strategy, this analysis provides a scalable roadmap for turning email campaigns into high-impact engagement channels.
 
 ---
 ## Future Enhancements
